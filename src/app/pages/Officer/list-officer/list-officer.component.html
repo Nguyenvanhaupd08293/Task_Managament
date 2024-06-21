@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="mt-5 mx-5">
+    <div class="container bg-white p-5 rounded shadow-sm">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 font-weight-bold text-dark">Quản lý thành viên</h2>
+            <a href="/admin/create" class="btn btn-success">Create officer</a>
+        </div>
+        <p class="text-secondary mb-4">Danh sách tất cả thành viên</p>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Họ và tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Khu vực</th>
+                        <th>Phai</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of list_NhanVien">
+                        <td>{{data.ho}} {{data.ten}}</td>
+                        <td>{{data.ngay_sinh|date:'dd/MM/yyyy'}}
+                        </td>
+                        <td>{{data.khu_vuc}}</td>
+                        <td>{{data.phai}}</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a routerLink="/editProject/" class="btn btn-warning" title="Edit">
+                                    edit
+                                    <i class="fa fa-pen"></i>
+                                </a>
+                                <div class="btn btn-danger" title="Delete">
+                                    <i class="fa fa-trash"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Repeat for additional projects -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 800;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #ffeb3b;
+    border: none;
+    cursor: pointer;
+}

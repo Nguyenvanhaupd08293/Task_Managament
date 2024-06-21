@@ -1,0 +1,32 @@
+<app-header></app-header>
+<form #frm1="ngForm" (ngSubmit)="edit()" class="col-8 m-auto border border-success px-3 mt-2">
+    <div class="mb-3">
+        Tên dự án
+        <input type="text" name="name_project" [(ngModel)]="data.name_project" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        Ngày bắt đầu
+        <input type="date" name="date_start" [(ngModel)]="data.date_start" required class="form-control">
+    </div>
+    <div class="mb-3">
+        Tiền
+        <input type="number" name="price" [(ngModel)]="data.price" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        Leader
+        <select name="leader" [(ngModel)]="data.leader" class="form-control" required>
+      <option *ngFor="let nv of listNhanVien" [value]="nv.id">
+        {{nv.ho}} {{nv.ten}}
+      </option>
+    </select>
+    </div>
+    <div class="mb-3">
+        Thành viên
+        <select name="member" [(ngModel)]="data.member" class="form-control" multiple size="4">
+      <option *ngFor="let nv of listNhanVien" [value]="nv.id">
+        {{nv.ho}} {{nv.ten}}
+      </option>
+    </select>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

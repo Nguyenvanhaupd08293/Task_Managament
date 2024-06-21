@@ -1,0 +1,29 @@
+aside {
+    padding: 20px;
+    text-align: center;
+}
+
+.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.profile h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.summary,
+.clients {
+    margin: 20px 0;
+}
+
+.clients ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.custom-border .list-group-item:not(:last-child) {
+    border-bottom: 1px solid #e9c40a;
+    /* Đường viền màu xám nhạt */
+}
